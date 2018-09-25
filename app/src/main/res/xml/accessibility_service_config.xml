@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
-    android:accessibilityEventTypes="typeNotificationStateChanged|typeWindowStateChanged|typeWindowContentChanged|typeWindowsChanged"
+    android:accessibilityEventTypes="typeAllMask"
     android:accessibilityFeedbackType="feedbackGeneric"
-    android:accessibilityFlags="flagDefault"
+    android:accessibilityFlags="flagDefault|flagReportViewIds|flagIncludeNotImportantViews"
     android:canRetrieveWindowContent="true"
-    android:description="这个时描述"
+    android:description="@string/wx_help"
+    android:packageNames="com.tencent.mm"
     android:notificationTimeout="100"
-    android:packageNames="com.tencent.mm" />
+    android:settingsActivity="com.help.collect.android.accessibility.ServiceSettingsActivity" />
+
+    <!--相应所有的事件
+    手机用什么方式将信息反馈给用户,语音震动等等,这里默认;
+    不知道啥用
+    允许获取手机内容
+    不知道啥用
+    监控应用报名
+    通知延时
+    设置页面 -->

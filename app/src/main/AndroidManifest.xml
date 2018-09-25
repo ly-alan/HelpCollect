@@ -3,8 +3,8 @@
     package="come.help.collect">
 
 
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
 
 
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
@@ -69,7 +69,7 @@
         <!--通话状态-->
         <receiver android:name=".call.CallReceiver">
             <intent-filter>
-                <action android:name="android.intent.action.PHONE_STATE"/>
+                <action android:name="android.intent.action.PHONE_STATE" />
                 <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
             </intent-filter>
         </receiver>
@@ -80,7 +80,7 @@
             android:name=".weixin.WxService"
             android:enabled="true"
             android:exported="true"
-            android:label="微信辅助"
+            android:label="@string/wx_help"
             android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
             <intent-filter>
                 <action android:name="android.accessibilityservice.AccessibilityService" />
