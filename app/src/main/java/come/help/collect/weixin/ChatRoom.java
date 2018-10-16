@@ -51,6 +51,17 @@ public class ChatRoom {
     }
 
     @Override
+    public boolean equals(Object obj) {
+        if (obj != null && obj instanceof ChatRoom) {
+            ChatRoom room = (ChatRoom) obj;
+            if (TextUtils.equals(name, room.getName()) && TextUtils.equals(message, room.getMessage())) {
+                return true;
+            }
+        }
+        return super.equals(obj);
+    }
+
+    @Override
     public String toString() {
         return "ChatRoom{" +
                 "name='" + name + '\'' +
